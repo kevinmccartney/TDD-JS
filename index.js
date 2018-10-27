@@ -1,6 +1,6 @@
 class Calculator {
-  static add() {
-
+  static add(numberString) {
+    return parseInt(numberString);
   }
 }
 
