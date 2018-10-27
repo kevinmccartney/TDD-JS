@@ -28,4 +28,8 @@ test('Calculator class has add method', () => {
 
 test('Calculator returns a number', () => {
   expect(Calculator.add('1')).toBeNumber();
-})
+});
+
+test('Calculator returns 0 for an empty string parameter', () => {
+  expect(Calculator.add('')).toBe(0);
+});
