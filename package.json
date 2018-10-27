@@ -1,0 +1,26 @@
+{
+  "name": "tdd-js-exercise",
+  "version": "0.0.1",
+  "description": "Code for the Test Driven Development (TDD): Example Walkthrough",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinmccartney/TDD-JS.git"
+  },
+  "keywords": [
+    "TDD",
+    "JS"
+  ],
+  "author": "Kevin McCartney <hello@kevinmccartney.is>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinmccartney/TDD-JS/issues"
+  },
+  "homepage": "https://github.com/kevinmccartney/TDD-JS#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
