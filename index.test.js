@@ -33,3 +33,7 @@ test('Calculator returns a number', () => {
 test('Calculator returns 0 for an empty string parameter', () => {
   expect(Calculator.add('')).toBe(0);
 });
+
+test('Calculator returns the sum of one number correctly', () => {
+  expect(Calculator.add('19')).toBe(19);
+});
