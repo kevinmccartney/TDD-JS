@@ -37,3 +37,17 @@ test('Calculator returns 0 for an empty string parameter', () => {
 test('Calculator returns the sum of one number correctly', () => {
   expect(Calculator.add('19')).toBe(19);
 });
+
+test('Calculator returns the sum of two numbers correctly', () => {
+  expect(Calculator.add('2,9')).toBe(11);
+});
+
+test('Calculator returns the sum of an unknown amount of numbers correctly', () => {
+  expect(Calculator.add('1,5,8,14')).toBe(28);
+  expect(Calculator.add('1,5,8,14,3,5')).toBe(36);
+});
+
+test('Calculator can handle newlines or commas as delimiters', () => {
+  expect(Calculator.add('3,8,9')).toBe(20);
+  expect(Calculator.add('3\n8\n9')).toBe(20);
+});

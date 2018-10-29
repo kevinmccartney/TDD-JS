@@ -3,7 +3,16 @@ class Calculator {
     if (numberString === '') {
       return 0;
     }
-    return parseInt(numberString);
+
+    let argumentsArray;
+
+    if (numberString.indexOf(',') > 0) {
+      argumentsArray = numberString.split(',');
+    } else {
+      argumentsArray = numberString.split('\n');
+    }
+
+    return argumentsArray.reduce((accumulator, currentVal) => accumulator + parseInt(currentVal), 0);
   }
 }
 
