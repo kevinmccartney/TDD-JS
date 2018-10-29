@@ -55,3 +55,7 @@ test('Calculator can handle newlines or commas as delimiters', () => {
 test('Calculator can handle mixed newlines or commas as delimiters', () => {
   expect(Calculator.add('3,1\n12', [',', '\n'])).toBe(16);
 });
+
+test('Calculator can handle mixed newlines or commas as delimiters', () => {
+  expect(Calculator.add('8,5\n12&4+18', [',', '\n', '&', '+'])).toBe(47);
+});
