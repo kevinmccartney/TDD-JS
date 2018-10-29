@@ -1,18 +1,15 @@
 class Calculator {
-  static add(numberString) {
+  static add(numberString, delimiters = [',']) {
     if (numberString === '') {
       return 0;
     }
 
-    let argumentsArray;
+    let argumentsString = delimiters.reduce((accumulator, currentVal) => {
+      return accumulator.split(currentVal).join(',');
+    }, numberString);
 
-    if (numberString.indexOf(',') > 0) {
-      argumentsArray = numberString.split(',');
-    } else {
-      argumentsArray = numberString.split('\n');
-    }
 
-    return argumentsArray.reduce((accumulator, currentVal) => accumulator + parseInt(currentVal), 0);
+    return argumentsString.split(',').reduce((accumulator, currentVal) => accumulator + parseInt(currentVal), 0);
   }
 }
 

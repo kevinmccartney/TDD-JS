@@ -49,5 +49,9 @@ test('Calculator returns the sum of an unknown amount of numbers correctly', () 
 
 test('Calculator can handle newlines or commas as delimiters', () => {
   expect(Calculator.add('3,8,9')).toBe(20);
-  expect(Calculator.add('3\n8\n9')).toBe(20);
+  expect(Calculator.add('3\n8\n9', ['\n'])).toBe(20);
+});
+
+test('Calculator can handle mixed newlines or commas as delimiters', () => {
+  expect(Calculator.add('3,1\n12', [',', '\n'])).toBe(16);
 });
